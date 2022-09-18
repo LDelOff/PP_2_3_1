@@ -7,8 +7,6 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.*;
 import java.util.List;
 
-
-@Transactional
 @Repository
 public class UserDAOImpl implements UserDAO {
     @PersistenceContext

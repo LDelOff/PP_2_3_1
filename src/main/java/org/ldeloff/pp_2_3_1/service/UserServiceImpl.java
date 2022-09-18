@@ -3,12 +3,12 @@ package org.ldeloff.pp_2_3_1.service;
 import org.ldeloff.pp_2_3_1.dao.UserDAO;
 import org.ldeloff.pp_2_3_1.dao.UserDAOImpl;
 import org.ldeloff.pp_2_3_1.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+
+@Transactional
 @Service
 public class UserServiceImpl implements UserService{
     private UserDAO userDAO = new UserDAOImpl();
