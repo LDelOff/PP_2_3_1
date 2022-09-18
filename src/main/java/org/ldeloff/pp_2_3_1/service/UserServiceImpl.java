@@ -11,8 +11,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 @Service
 public class UserServiceImpl implements UserService{
-    @Autowired
     private UserDAO userDAO = new UserDAOImpl();
+
     @Override
     public List<User> allUser() {
         return userDAO.allUser();
