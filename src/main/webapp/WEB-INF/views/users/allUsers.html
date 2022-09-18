@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All users</title>
+</head>
+<body>
+
+<div>
+    <h1>Все пользователи:</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Имя</th>
+            <th scope="col">Фамилия</th>
+            <th scope="col">Эл.почта</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="person: ${users}">
+            <td>
+                <a th:href="@{/{id}(id=${person.getId()})}" th:text="${person.getId()}"></a>
+            </td>
+            <td>
+                <a th:href="@{/{id}(id=${person.getId()})}" th:text="${person.getFirstName()}"></a>
+            </td>
+            <td>
+                <a th:href="@{/{id}(id=${person.getId()})}" th:text="${person.getLastName}"></a>
+            </td>
+            <td>
+                <a th:href="@{/{id}(id=${person.getId()})}" th:text="${person.getEmail}"></a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<br/>
+<hr/>
+
+<a href="/new">Создать нового пользователя</a>
+
+</body>
+</html>
